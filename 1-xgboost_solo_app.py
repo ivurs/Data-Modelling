@@ -143,7 +143,7 @@ def xgb_model_fit(dt_feature_list,feature_names,mAlg, trainDT,trainOutputDT,test
     feat_imp['Proteins'] = np.array(feature_new_names)
     feat_imp = feat_imp.set_index('Proteins').sort_values(by=['score'], ascending=False)
     #print(feat_imp)
-    feat_imp[:30].plot(kind='bar', title='Feature Importances', figsize=(10, 8))
+    feat_imp[:30].plot(kind='barh', title='Feature Importances', figsize=(10, 8))
     plt.ylabel('Feature Importance Score')
     plt.show()
     
